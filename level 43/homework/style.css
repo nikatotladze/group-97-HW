@@ -1,0 +1,22 @@
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #ecf2ff;
+        }
+
+        .result-gradient {
+            background: linear-gradient(to bottom, #7755ff, #2f2ce9);
+        }
+
+        .circle-gradient {
+            background: linear-gradient(to bottom, #4d21c9, rgba(37, 33, 201, 0));
+        }
+
+        .summary-item-reaction { background-color: hsla(0, 100%, 67%, 0.05); color: #ff5555; }
+        .summary-item-memory { background-color: hsla(39, 100%, 56%, 0.05); color: #ffb21e; }
+        .summary-item-verbal { background-color: hsla(166, 100%, 37%, 0.05); color: #00bb8f; }
+        .summary-item-visual { background-color: hsla(234, 85%, 45%, 0.05); color: #1125d6; }
+
+        .btn-active:active {
+            background: linear-gradient(to bottom, #7755ff, #2f2ce9);
+        }
