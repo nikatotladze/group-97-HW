@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    gap: 15px;
+    background-color: #333333;
+    padding: 15px;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "red1  cyan1 gold1"
+        "white1 gold2 white2"
+        "white1 red2  cyan2";
+}
+
+.card {
+    border-radius: 4px;
+}
+
+.red-1   { grid-area: red1;   background-color: #e74c3c; }
+.cyan-1  { grid-area: cyan1;  background-color: #1abc9c; }
+.gold-1  { grid-area: gold1;  background-color: #d4b26f; }
+.white-1 { grid-area: white1; background-color: #ffffff; }
+.gold-2  { grid-area: gold2;  background-color: #d4b26f; }
+.white-2 { grid-area: white2; background-color: #ffffff; grid-row: span 2; }
+.red-2   { grid-area: red2;   background-color: #e74c3c; }
+.cyan-2  { grid-area: cyan2;  background-color: #1abc9c; }
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: none;
+        height: auto;
+    }
+    
+    .card {
+        height: 150px;
+        grid-area: auto !important;
+        grid-row: auto !important;
+    }
+}
